@@ -5,4 +5,4 @@
 This project was made posible thanks to [The Odin Project](https://www.theodinproject.com/).
 
 ## License
-[MIT]().
+[MIT](https://mit-license.org/).
