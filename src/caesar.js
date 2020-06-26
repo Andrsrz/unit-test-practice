@@ -6,7 +6,11 @@ const caesar = (word, key) => {
 	for(let i = 0; i < word.length; i++){
 		let charCode = word.charCodeAt(i);
 		if((charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122)){
-			cipher += String.fromCharCode(charCode + key);
+			if((charCode + key > 122) || (charCode + key > 90 && charCode < 97)){
+				cipher += String.fromCharCode(charCode + key - 26);
+			}else{
+				cipher += String.fromCharCode(charCode + key);
+			}
 		}else{
 			cipher += word[i];
 		}
